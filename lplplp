@@ -1,0 +1,16 @@
+public class PrinterComposite<T extends Printer> implements Printer
+{
+private final List<T> printers;
+public PrinterComposite(List<T> printers)
+{
+this.printers = printer;
+}
+@Override
+public void print()
+{
+for (Printer printer: this.printers)
+{
+printer.printer();
+}
+}
+}
