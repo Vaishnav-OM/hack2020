@@ -1,0 +1,24 @@
+public interface CustomCloneable
+{
+public Object customClone();
+}
+public class Electronics implements CustomCloneable
+{
+private final String product;
+public Electronics(String product)
+{
+this.product = product;
+}
+@Override
+public Electronics customClone()
+{
+return new Electronics(this.product);
+}
+public String getProduct()
+{
+return this.product;
+}
+}
+Electronics originalProduct = new Electronics("Mobile Phone");
+Electronics clonedProduct = originalProduct.customClone();
+System.out.println(clonedProduct.getProduct());
