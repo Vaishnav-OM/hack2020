@@ -1,0 +1,9 @@
+public class ShapeDrawer
+{
+public static void draw(ShapeDrawer shape)
+{
+System.out.println(shape.drawShape());
+}
+}
+ShapeDrawer.draw(new Square()); // Output: This is a Square
+ShapeDrawer.draw(new Circle()); //Output: This is a Circle
